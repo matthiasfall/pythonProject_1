@@ -3,7 +3,7 @@ import time
 #Einleitung
 print("*****************************"); time.sleep(0.5)
 print("* SCHERE | STEIN | PAPIER *"); time.sleep(0.5)
-print("************************"); time.sleep(0.5)
+print("*****************************"); time.sleep(0.5)
 #Variablen
 figuren = ["Schere", "Stein", "Papier"]
 spielen = True
