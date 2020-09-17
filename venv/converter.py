@@ -106,6 +106,14 @@ while calc == True:
     else:
         print("Bitte treffen Sie eine gültige auswahl!")
 
-else:
-    calc= input("Möchten Sie noch einen Wert umrechnen? [Y] JA oder [N] Nein: ")
+# Restart?
+
+        time.sleep(1)
+
+    entscheidung = ""
+    while entscheidung not in ("y", "n"):
+        entscheidung = input("\nNochmal umrechnen? [y] Ja  [n]Nein")
+    if (entscheidung == "n"):
+        calc = False
+
 
