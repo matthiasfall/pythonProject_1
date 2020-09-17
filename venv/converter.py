@@ -3,19 +3,9 @@ import time
 #convert different units
 
 # varible
-#unit = str("")
-#number_to_converte = str("")
-#meter = float(0)
-#feet = float(0)
-#centigrade = int(0)
-#kmh = float(0)
-#liter = float(0)
-#fahrenheit = float(0)
-#mph=float(0)
-#gallons = float(0)
+calc = True
 
-#start
-
+# Impressum
 def startscreen():
     print("********************************************"), time.sleep(0.25)
     print("*          Convert differnt units          *"), time.sleep(0.25)
@@ -64,9 +54,9 @@ def liter_gallons(value):
     liter_gallons_result = float(value/3.785)
     print(value, " Liter sind ", round(liter_gallons_result, 2), " Gallonen.")
 
-def gallons_liter(gallons):
+def gallons_liter(value):
     print("Sie haben die Umrechnung Gallonen zu Liter gewählt...")
-    gallons_liter_result = float(value * 3,785)
+    gallons_liter_result = float(value * 3.8785)
     print(value, " Gallonen sind ", round(gallons_liter_result, 2), " Liter.")
 
 #start
@@ -74,43 +64,48 @@ print(startscreen())
 
 # userinput
 
-choice = int(input("Geben Sie die gewünscht Einheit bekannt (1-8): "))
+while calc == True:
+
+    choice = int(input("Geben Sie die gewünscht Einheit bekannt (1-8): "))
 
 
-# convert user input to float
-value_input = str(input("Geben Sie den Wert für die Umrechnung bekannt: "))
-value_replace = value_input.replace(",", ".")
-value = int(value_replace)
+    # convert user input to float
+    value_input = str(input("Geben Sie den Wert für die Umrechnung bekannt: "))
+    value_replace = value_input.replace(",", ".")
+    value = int(value_replace)
 
 
 
 
 # function call
 
-if choice == 1:
-    meter_feet(value)
+    if choice == 1:
+        meter_feet(value)
 
-elif choice == 5:
-    feet_meter(value)
+    elif choice == 5:
+        feet_meter(value)
 
-elif choice == 2:
-    centigrade_fahrenheit(value)
+    elif choice == 2:
+        centigrade_fahrenheit(value)
 
-elif choice == 6:
-    fahrenheit_centigrade(value)
+    elif choice == 6:
+        fahrenheit_centigrade(value)
 
-elif choice == 3:
-    kmh_mph(value)
+    elif choice == 3:
+        kmh_mph(value)
 
-elif choice == 7:
-    mph_kmh(value)
+    elif choice == 7:
+        mph_kmh(value)
 
-elif choice == 4:
-    liter_gallons(value)
+    elif choice == 4:
+        liter_gallons(value)
 
-elif choice == 8:
-    gallons_liter(value)
+    elif choice == 8:
+        gallons_liter(value)
+
+    else:
+        print("Bitte treffen Sie eine gültige auswahl!")
 
 else:
-    print("Bitte treffen Sie eine gültige auswahl!")
+    calc= input("Möchten Sie noch einen Wert umrechnen? [Y] JA oder [N] Nein: ")
 
