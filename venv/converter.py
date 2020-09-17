@@ -112,7 +112,7 @@ while calc == True:
 
     entscheidung = ""
     while entscheidung not in ("y", "n"):
-        entscheidung = input("\nNochmal umrechnen? [y] Ja  [n]Nein")
+        entscheidung = input("\nNochmal umrechnen? [y] Ja  [n]Nein : ")
     if (entscheidung == "n"):
         calc = False
 
